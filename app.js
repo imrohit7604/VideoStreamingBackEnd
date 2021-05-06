@@ -31,6 +31,6 @@ app.get('/downloadVideo', (req, res) => {
 });
 
 const port = Process.env.PORT || 3000 ;
-app.listen(poert, () => {
+app.listen(port, () => {
     console.log(`Listening on port ${port} !`)
 });
