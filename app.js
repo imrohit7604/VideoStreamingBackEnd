@@ -18,6 +18,10 @@ app.get('/video', (req, res) => {
     res.sendFile('assets/test.mp4', { root: __dirname });
 });
 
+app.get('/', (req, res) => {
+  res.send("Welcome !!");
+});
+
 app.get('/test', (req, res) => {
   res.send("working fine");
 });
