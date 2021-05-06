@@ -19,7 +19,7 @@ app.get('/video', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send("Welcome !!");
+  res.send("Welcome");
 });
 
 app.get('/test', (req, res) => {
@@ -30,6 +30,7 @@ app.get('/downloadVideo', (req, res) => {
     res.download(__dirname+'/assets/test.mp4',"download.mp4");
 });
 
-app.listen(4000, () => {
-    console.log('Listening on port 4000!')
+const port = Process.env.PORT || 3000 ;
+app.listen(poert, () => {
+    console.log(`Listening on port ${port} !`)
 });
