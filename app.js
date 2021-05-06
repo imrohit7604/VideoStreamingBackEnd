@@ -15,12 +15,15 @@ app.use(function(req, res, next) {
 
 //End Point for getting video
 app.get('/video', (req, res) => {
-    res.sendFile('assets/finalVideo.mp4', { root: __dirname });
+    res.sendFile('assets/test.mp4', { root: __dirname });
 });
 
+app.get('/test', (req, res) => {
+  res.send("working fine");
+});
 
 app.get('/downloadVideo', (req, res) => {
-    res.download(__dirname+'/assets/finalVideo.mp4',"download.mp4");
+    res.download(__dirname+'/assets/test.mp4',"download.mp4");
 });
 
 app.listen(4000, () => {
